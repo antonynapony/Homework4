@@ -10,6 +10,10 @@ while (true)
         for (int i = 0; i < arrayLength; i++)
         {
             numbers[i] = int.Parse(Console.ReadLine());
+        }
+
+        for (int i = 0; i < arrayLength; i++)
+        {
             sum += numbers[i];
         }
 
