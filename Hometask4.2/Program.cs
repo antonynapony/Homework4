@@ -6,24 +6,30 @@ while (true)
     if (isParseSuccess && arrayLength >= 2)
     {
         int[] numbers = new int[arrayLength];
-        int min = numbers[0];
-        int max = numbers[0];
-        int diff = 0;
         for (int i = 0; i < arrayLength; i++)
         {
             numbers[i] = int.Parse(Console.ReadLine());
+        }
+
+        int min = numbers[0];
+        int max = numbers[0];
+        int difference = 0;
+        for (int i = 1; i < arrayLength; i++)
+        {
             if (numbers[i] < min)
             {
                 min = numbers[i];
             }
-            else if (numbers[i] > max)
+            if (numbers[i] > max)
             {
                 max = numbers[i];
             }
+            difference = max - min;
         }
 
-        diff = max - min;
-        Console.Write($"Разница между максимальным и минимальным значениями элементов массива равно: {diff}");
+        Console.WriteLine($"Минимальный элемент массива равен: {min}");
+        Console.WriteLine($"Максимальный элемент массива равен: {max}");
+        Console.WriteLine($"Разница между максимальным и минимальным элементами массива равна: {difference}");
     }
     else
     {
