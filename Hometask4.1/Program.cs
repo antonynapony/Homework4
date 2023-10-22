@@ -3,7 +3,7 @@
 while (true)
 {
     bool isParseSuccess = int.TryParse(Console.ReadLine(), out int arrayLength);
-    if (isParseSuccess)
+    if (isParseSuccess && arrayLength > 2)
     {
         int[] numbers = new int[arrayLength];
         int sum = 0;
@@ -17,6 +17,6 @@ while (true)
     }
     else
     {
-        Console.WriteLine("Неверно введено число!");
+        Console.WriteLine("Неверно введено число! Размер массива должен быть целочисленным значением > 2!");
     }
 }
